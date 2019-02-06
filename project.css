@@ -9,22 +9,13 @@
 }
 
 .wrapper {
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
 }
 
 p {
     font-size: 16px;
-    color: #424242;
 }
-
-h2 {
-    color: #424242;
-}
-h6 {
-    color: #424242;
-}
-
 
 
 /*---------------nav---------------*/
@@ -36,39 +27,85 @@ h6 {
 .topnav a:nth-child(1) {
     float: left;
     display: block;
-    color: #424242;
+    color: #333;
     text-align: center;
-    padding: 40px 0px;
+    padding: 50px 16px;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 900;
     font-family: 'Muli', sans-serif;
-    letter-spacing: 1px;
 }
 
-.topnav a:nth-child(n+2):nth-child(-n+5) {
+.topnav a:nth-child(n+2):nth-child(-n+4) {
     float: right;
     display: block;
-    color: #666666;
+    color: #333;
     text-align: center;
     padding: 50px 16px;
     text-decoration: none;
     font-size: 16px;
     font-family: 'Muli', sans-serif;
-    font-weight: 500;
 }
 
 
 
 /* Change the color of links on hover */
-.topnav a:nth-child(n+2):nth-child(-n+5):hover {
-    color: #f0ad41;
+.topnav a:nth-child(n+2):nth-child(-n+6):hover {
+    /*background-color: #ddd;*/
+    color: #ddd;
 }
 
-a:hover {
+/* Add an active class to highlight the current page */
+.active {
+    /*background-color: #4CAF50;*/
+    color: #ddd;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+    padding: 36px 16px;
+    color: #333;
+}
+
+/*----------------------nav overlay----------------------*/
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: white;
+    overflow-y: hidden;
+    transition: 0s;
+}
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 30px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+.overlay a:hover, .overlay a:focus {
+    color: #FDE541;
     text-decoration: none;
 }
-
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 45px;
+}
 
 /*----------------------body----------------------*/
 
@@ -79,12 +116,11 @@ img {
 }
 
 
-/*.top-title {
-	font-size: 2.375rem;
+.top-title {
+	font-size: 30px;
 	padding: 40px 0px 0px 0px;
 	font-family: 'Muli', sans-serif;
-    color: yellow;
-}*/
+}
 
 /*.top-description {
 	font-size: 12px;
@@ -100,7 +136,7 @@ img {
 }
 
 #info-title {
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: 600;
 	padding: 0px 0px 0px 0px;
 }
@@ -239,7 +275,7 @@ footer p {
 	}
 }
 
-/*@media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
   .topnav a:nth-child(n+2):nth-child(-n+4) {
     display: none;
     }
@@ -247,10 +283,10 @@ footer p {
     float: right;
     display: block;
   }
-}*/
+}
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-/*@media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive a.icon {
     position: absolute;
@@ -262,13 +298,4 @@ footer p {
     display: block;
     text-align: left;
   }
-}*/
-@media screen and (max-width: 641px) {
-    .topnav a:nth-child(n+2):nth-child(-n+5) {
-        display: none;
-    }
-    .wrapper {
-        width: 85%;
-    }
-
 }
